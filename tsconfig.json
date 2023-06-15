@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
     "target": "es5",
+
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -14,13 +16,30 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
+    "sourceMap": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "jsx": "react-jsx",
+    "baseUrl":"./src",
+    "paths": {
+    "@pages/*" : ["pages/*"],
+    "@button/*" : ["pages/button/*"],
+    "@login/*" : ["pages/login/*"],
+    "@styled/*" : ["styled/*"],
+    "@btnStyle/*": ["styled/btnStyle/*"],
+    "@loginStyle/*": ["styled/loginStyle/*"],
+    "@images/*": ["images/*"],
+    "@paths/*": ["paths/*"],
+    "@LoginPath/*": ["paths/login/*"]
   },
+},
   "include": [
     "src"
-  ]
+  ],
 }
