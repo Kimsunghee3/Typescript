@@ -1,38 +1,36 @@
 import { LoginImg } from "@paths/login"
 import { Backspace, Icons, LoginWrapper, IconWrap } from "@styled/loginStyle"
+import { AccountProduce, LoadAccount} from "@array/Stepper"
+
+interface walletInfo {
+    imgPath: string
+    content: string
+}
 
 export const LoginHeader = () => {
+
+    const renderWalletHeader = (walletArray:walletInfo[]) => {
+        return(
+            walletArray.map((v,index, array) => {
+                return(
+                    <>
+                        <Icons src={v.imgPath} alt=""/>
+                        {v.content}
+                        {index === array.length-1 ? <></> : <Icons src={LoginImg.afterLine} alt=""/>}
+                    </>
+                )
+            })
+        )
+}
     return(
         <>
             <LoginWrapper>
                         <Backspace src={LoginImg.backSpace} alt="backSpace" />
                 <IconWrap>
-                    <>
-                        <Icons src={LoginImg.one} alt=""/>
-                        <Icons src={LoginImg.afterLine} alt=""/>
-                        니모닉 생성
-                        <Icons src={LoginImg.afterLine} alt=""/>
-                    </>
-                    <>
-                        <Icons src={LoginImg.two} alt="" />
-                        <Icons src={LoginImg.afterLine} alt=""/>
-                        니모닉 확인
-                        <Icons src={LoginImg.afterLine} alt=""/>
-                        
-                    </>
-                    <>
-                        <Icons src={LoginImg.three} alt="" />
-                        <Icons src={LoginImg.afterLine} alt=""/>
-                        정보 입력
-                        <Icons src={LoginImg.afterLine} alt=""/>
-                        
-                    </>
-                    <>
-                        <Icons src={LoginImg.four} alt="" />
-                        지갑생성
-                    </>
+                    {renderWalletHeader(AccountProduce)}
                 </IconWrap>
             </LoginWrapper>
         </>
     )
 }
+//

@@ -36,7 +36,8 @@
     "@loginStyle/*": ["styled/loginStyle/*"],
     "@images/*": ["images/*"],
     "@paths/*": ["paths/*"],
-    "@LoginPath/*": ["paths/login/*"]
+    "@LoginPath/*": ["paths/login/*"],
+    "@array/*": ["array/*"]
   },
 },
   "include": [
