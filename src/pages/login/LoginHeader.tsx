@@ -21,7 +21,7 @@ export const LoginHeader = () => {
                 )
             })
         )
-}
+    }
     return(
         <>
             <LoginWrapper>
@@ -33,4 +33,3 @@ export const LoginHeader = () => {
         </>
     )
 }
-//
